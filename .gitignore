@@ -1,0 +1,14 @@
+/logs/
+Out.txt
+/run/
+/.gradle/
+/build/
+/.idea/
+/data/
+/out/
+
+*.mca
+
+setvars.bat
+
+/bin/

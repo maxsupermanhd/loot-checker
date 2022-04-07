@@ -1,0 +1,32 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+    id 'java'
+    id 'maven-publish'
+}
+
+group 'pepe.EgapChecker'
+version '1.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    implementation('com.github.jellejurre:seed-checker:1.18.1-SNAPSHOT'){transitive=false}
+    minecraft "com.mojang:minecraft:1.18.1"
+}
+
+shadowJar {
+    dependsOn remapJar
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'pepe.EgapChecker.EgapChecker'
+        )
+    }
+}
