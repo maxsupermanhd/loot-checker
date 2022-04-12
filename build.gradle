@@ -16,17 +16,19 @@ repositories {
 
 dependencies {
     implementation('com.github.jellejurre:seed-checker:1.18.1-SNAPSHOT'){transitive=false}
-    minecraft "com.mojang:minecraft:1.18.1"
 }
+import com.github.jengelman.gradle.plugins.shadow.transformers.Log4j2PluginsCacheFileTransformer
 
 shadowJar {
-    dependsOn remapJar
+    dependsOn jar
+    transform(Log4j2PluginsCacheFileTransformer)
 }
 
 jar {
     manifest {
         attributes(
-            'Main-Class': 'pepe.EgapChecker.EgapChecker'
+                'Multi-Release': 'true',
+                'Main-Class': 'pepe.EgapChecker.EgapChecker'
         )
     }
 }
