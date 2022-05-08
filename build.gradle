@@ -4,10 +4,11 @@ plugins {
     id 'maven-publish'
 }
 
-group 'pepe.EgapChecker'
+group 'pepe.LootChecker'
 version '1.0'
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         url "https://jitpack.io"
@@ -16,6 +17,7 @@ repositories {
 
 dependencies {
     implementation('com.github.jellejurre:seed-checker:1.18.1-SNAPSHOT'){transitive=false}
+    implementation('com.fasterxml.jackson.core:jackson-databind:2.13.2.2')
 }
 import com.github.jengelman.gradle.plugins.shadow.transformers.Log4j2PluginsCacheFileTransformer
 
@@ -28,7 +30,7 @@ jar {
     manifest {
         attributes(
                 'Multi-Release': 'true',
-                'Main-Class': 'pepe.EgapChecker.EgapChecker'
+                'Main-Class': 'pepe.LootChecker.LootChecker'
         )
     }
 }

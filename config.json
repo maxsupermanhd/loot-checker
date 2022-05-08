@@ -1,0 +1,12 @@
+{
+	"Seed": "69420",
+	"Dimension": "OVERWORLD",
+	"TargetState": "STRUCTURES",
+	"Threads": 4,
+	"OutputFilename": "out.txt",
+	"FilteredSearchLocationsFile": "inputLocations.csv",
+	"SearchItems": [
+		"enchanted_golden_apple"
+	],
+	"OutputFormatString": "waypoint:%s:T:%d:%d:%d:%d:false:0:gui.xaero_default:false:0:false\n"
+}
