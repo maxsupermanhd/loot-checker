@@ -2,6 +2,10 @@
 
 Wrapper around seed-checker with easy config for mainstream loot checking
 
+## Building
+
+`./gradlew shadowJar`
+
 ## Configuration
 
 File `config.json` contains example configuration, all fields should be self-explanatory.
